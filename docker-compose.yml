@@ -1,0 +1,28 @@
+services:
+  strapi:
+    build: .
+    ports:
+      - '1337:1337'
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: strapi
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: drivate_db_admin
+      DATABASE_PASSWORD: iXKRop73X2_adm1n
+      NODE_ENV: production
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: drivate_strapi
+      POSTGRES_USER: drivate_db_admin
+      POSTGRES_PASSWORD: iXKRop73X2_adm1n
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+
