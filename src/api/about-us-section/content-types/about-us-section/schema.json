@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_us_sections",
+  "info": {
+    "singularName": "about-us-section",
+    "pluralName": "about-us-sections",
+    "displayName": "About Us Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "About_Us_Statement": {
+      "type": "text",
+      "required": true
+    },
+    "Image_1": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Image_2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "why_choose_us_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::why-choose-us-section.why-choose-us-section",
+      "mappedBy": "about_us_section"
+    }
+  }
+}

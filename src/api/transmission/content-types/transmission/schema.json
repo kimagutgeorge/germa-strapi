@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transmissions",
+  "info": {
+    "singularName": "transmission",
+    "pluralName": "transmissions",
+    "displayName": "Transmission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Transmission_Type": {
+      "type": "string"
+    },
+    "vehicle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vehicle.vehicle",
+      "mappedBy": "transmission"
+    }
+  }
+}

@@ -5,15 +5,24 @@ services:
       - '1337:1337'
     depends_on:
       - postgres
+    volumes:
+      - ./src:/srv/app/src
+      - ./public/uploads:/srv/app/public/uploads
     environment:
       DATABASE_CLIENT: postgres
-      DATABASE_NAME: strapi
+      DATABASE_NAME: drivate_strapi
       DATABASE_HOST: postgres
       DATABASE_PORT: 5432
       DATABASE_USERNAME: drivate_db_admin
       DATABASE_PASSWORD: iXKRop73X2_adm1n
-      NODE_ENV: production
-
+      NODE_ENV: development
+      APP_KEYS: "qjcOSD5aUoNqTkn9ELTn+1VM/ZMnqjSD3Se125ZORjo=,WGsdwsll3HlgdvOJ3CpccL1GOB8oRxpOQ2vrJXMbq3Y="
+      API_TOKEN_SALT: "DD/Yv9bCamBumoYHidUGRO0nw153k7LFmWviO0zVXdk="
+      ADMIN_JWT_SECRET: "z5HViyApnosRe/zn+5rhiFQbtcHz3a2cHISp63JC+3A="
+      JWT_SECRET: "pvHkhG++DrzeZ3EzVI+BH5dY7wDlh8rkWPVt88d9AT0="
+      TRANSFER_TOKEN_SALT: "hHmd24j6l8ip/Z9ZehDrMWkmNEKoNQ8xci0diWfp+1Y="
+      SMTP_USERNAME: "yako.mailer@gmail.com"
+      SMTP_PASSWORD: "mnfq cyui rkut wyza"
   postgres:
     image: postgres:15-alpine
     environment:
@@ -22,7 +31,5 @@ services:
       POSTGRES_PASSWORD: iXKRop73X2_adm1n
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
 volumes:
   postgres_data:
-

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "body_styles",
+  "info": {
+    "singularName": "body-style",
+    "pluralName": "body-styles",
+    "displayName": "Body Styles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Body_style": {
+      "type": "string",
+      "required": true
+    },
+    "Body_Style_Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "vehicle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vehicle.vehicle",
+      "mappedBy": "body_style"
+    }
+  }
+}

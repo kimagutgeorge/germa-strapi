@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "makes",
+  "info": {
+    "singularName": "make",
+    "pluralName": "makes",
+    "displayName": "Makes"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Make_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Make_Logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "models": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::model.model",
+      "mappedBy": "make"
+    },
+    "vehicle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vehicle.vehicle",
+      "mappedBy": "make"
+    }
+  }
+}

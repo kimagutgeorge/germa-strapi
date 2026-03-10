@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "why_choose_us_sections",
+  "info": {
+    "singularName": "why-choose-us-section",
+    "pluralName": "why-choose-us-sections",
+    "displayName": "Why Choose Us Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "FontAwesone_Text": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "about_us_section": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::about-us-section.about-us-section",
+      "inversedBy": "why_choose_us_sections"
+    }
+  }
+}
