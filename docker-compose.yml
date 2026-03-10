@@ -15,6 +15,9 @@ services:
       DATABASE_PORT: 5432
       DATABASE_USERNAME: drivate_db_admin
       DATABASE_PASSWORD: iXKRop73X2_adm1n
+      CLOUDINARY_NAME: dxvz7tsf4
+      CLOUDINARY_KEY: 779198954938466
+      CLOUDINARY_SECRET: Zwx3bySgALg2XUB74ClkMKsL44U
       NODE_ENV: development
       APP_KEYS: "qjcOSD5aUoNqTkn9ELTn+1VM/ZMnqjSD3Se125ZORjo=,WGsdwsll3HlgdvOJ3CpccL1GOB8oRxpOQ2vrJXMbq3Y="
       API_TOKEN_SALT: "DD/Yv9bCamBumoYHidUGRO0nw153k7LFmWviO0zVXdk="
@@ -30,6 +33,6 @@ services:
       POSTGRES_USER: drivate_db_admin
       POSTGRES_PASSWORD: iXKRop73X2_adm1n
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+     - postgres_data:/var/lib/postgresql/data
 volumes:
   postgres_data:
