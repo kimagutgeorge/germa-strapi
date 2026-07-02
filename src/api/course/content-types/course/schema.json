@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Courses"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Course_Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "domain": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::domain.domain",
+      "inversedBy": "courses"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "operational_level": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::operational-level.operational-level"
+    },
+    "Capability": {
+      "type": "text"
+    },
+    "ServiceType": {
+      "type": "string"
+    },
+    "Target_Audience": {
+      "type": "text"
+    },
+    "Purpose": {
+      "type": "text"
+    },
+    "Overview": {
+      "type": "richtext"
+    },
+    "DeliveryFormat": {
+      "type": "text"
+    },
+    "Duration": {
+      "type": "string"
+    },
+    "EntryRequirements": {
+      "type": "text"
+    },
+    "ExpectedOutcome": {
+      "type": "text"
+    },
+    "BespokeOptions": {
+      "type": "text"
+    },
+    "order_number": {
+      "type": "integer"
+    }
+  }
+}

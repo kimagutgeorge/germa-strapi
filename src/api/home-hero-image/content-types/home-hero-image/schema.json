@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_hero_images",
+  "info": {
+    "singularName": "home-hero-image",
+    "pluralName": "home-hero-images",
+    "displayName": "Home Hero Images"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tab_Title": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Home",
+        "Who We Are",
+        "Training",
+        "Courses",
+        "Partners",
+        "Contact us"
+      ]
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

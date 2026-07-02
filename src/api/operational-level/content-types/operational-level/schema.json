@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "operational_levels",
+  "info": {
+    "singularName": "operational-level",
+    "pluralName": "operational-levels",
+    "displayName": "Operational Level"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "ShortDescription": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Background_Color": {
+      "type": "string"
+    },
+    "order_number": {
+      "type": "integer"
+    }
+  }
+}

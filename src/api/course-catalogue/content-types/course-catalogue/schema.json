@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_catalogues",
+  "info": {
+    "singularName": "course-catalogue",
+    "pluralName": "course-catalogues",
+    "displayName": "Course Catalogue"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Course": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

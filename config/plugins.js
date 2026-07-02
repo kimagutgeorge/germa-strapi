@@ -1,24 +1,4 @@
 module.exports = ({ env }) => ({
-upload: {
-    config: {
-      provider: 'cloudinary',
-      providerOptions: {
-        cloud_name: process.env.CLOUDINARY_NAME,
-        api_key: process.env.CLOUDINARY_KEY,
-        api_secret: process.env.CLOUDINARY_SECRET,
-      },
-      actionOptions: {
-        upload: {
-           quality: 'auto',
-           fetch_format: 'auto',
-        },
-        uploadStream: {
-          quality: 'auto',
-          fetch_format: 'auto',
-        },
-      },
-    },
-  },
   email: {
     config: {
       provider: 'nodemailer',
@@ -33,6 +13,27 @@ upload: {
       settings: {
         defaultFrom: env('SMTP_USERNAME'),
         defaultReplyTo: env('SMTP_USERNAME'),
+      },
+    },
+  },
+  upload: {
+    config: {
+      sizeLimit: 250 * 1024 * 1024, // 250mb in bytes
+      provider: 'cloudinary',
+      providerOptions: {
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_KEY'),
+        api_secret: env('CLOUDINARY_SECRET'),
+      },
+      actionOptions: {
+        upload: {
+          quality: 'auto',
+          fetch_format: 'auto',
+        },
+        uploadStream: {
+          quality: 'auto',
+          fetch_format: 'auto',
+        },
       },
     },
   },
